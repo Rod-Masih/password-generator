@@ -91,7 +91,7 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 var passwordLength = prompt("How long would you like your password to be");
 
-// var button = document.querySelector("button");
+var button = document.querySelector("button");
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -105,7 +105,16 @@ function getRandom(arr) {
   let randomValue = allArrays[Math.floor(Math.random() * allarrays.length)];
 }
 // Function to generate password with user input
-function generatePassword() {}
+function generatePassword() {
+  var passwordLength = prompt(
+    "enter the desired length if the password (between 8 an 128 characters)"
+  );
+
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("password length must be betwen 8 and 128 characters");
+    return;
+  }
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
